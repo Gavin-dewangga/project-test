@@ -1,0 +1,165 @@
+/* Base Reset */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+  background: #ff5a00;
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding-bottom: 4px;
+}
+.nav-links li a.active {
+  border-bottom: 2px solid #fff;
+}
+
+/* Logo */
+.logo img {
+  height: 100px;
+  width: auto;
+}
+
+/* Page Header */
+.page-header {
+  position: relative;
+  text-align: center;
+  color: #000;
+  padding: 100px 20px;
+  background-image: url('assets/img/banner.png');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  background-color: #fff;
+  clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
+}
+.page-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+.page-header p {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+#meta-info {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+.selects select {
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+/* Cards */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+.card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+.card h4 {
+  margin: 0.5rem 0 0.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.card p {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.pagination button {
+  padding: 0.5rem 0.75rem;
+  font-size: 14px;
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.pagination button:hover {
+  background-color: #ff5a00;
+  color: white;
+  border-color: #ff5a00;
+}
+.pagination button.active {
+  background-color: #ff5a00;
+  color: white;
+  font-weight: bold;
+  border-color: #ff5a00;
+}
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.pagination span {
+  padding: 0.5rem 0.75rem;
+  color: #999;
+}
