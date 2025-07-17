@@ -1,66 +1,58 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Berita Kini - Platform berita terkini dari berbagai kategori seperti nasional, internasional, hiburan, olahraga, dan lainnya.">
-  <meta name="keywords" content="berita, berita terkini, berita indonesia, nasional, internasional, olahraga, hiburan, gaya hidup">
-  <meta name="author" content="Berita Kini">
-  <title>Berita Kini</title>
-
-  <!-- CSS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ideas - Suitmedia Clone</title>
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Font Awesome (untuk ikon panah slider) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-KY4L8ArM8M1y0fErwY0uV5PzqZ0dQw2+1zRvTx2PscCSv6lyx7FbL7R5m5tTn5Fo/pt/qhO5nTfKKfDxAJ7tdw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <!-- Favicon -->
-  <link rel="icon" href="assets/berita.png" type="image/png">
 </head>
 <body>
-  <!-- Header dan Navbar -->
-  <header>
-    <nav class="navbar container">
+  <nav class="navbar">
+    <div class="container">
       <div class="logo">
-        <img src="assets/berita.png" alt="Logo Berita Kini" />
-        <span>Berita Kini</span>
+         <img src="assets/img/logo-new.png" alt="Suitmedia Logo" />
       </div>
       <ul class="nav-links">
-        <li><a href="#" class="active" data-category="latest">Beranda</a></li>
-        <li><a href="#" data-category="terbaru">Terbaru</a></li>
-        <li><a href="#" data-category="entertainment">Hiburan</a></li>
-        <li><a href="#" data-category="lifestyle">Gaya Hidup</a></li>
-        <li><a href="#" data-category="sports">Olahraga</a></li>
-        <li><a href="#" data-category="national">Nasional</a></li>
-        <li><a href="#" data-category="international">Internasional</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#" class="active">Ideas</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
-    </nav>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <h1>Ideas</h1>
+      <p>Where all our great things begin</p>
+    </div>
   </header>
 
-  <!-- Main Content -->
-  <main class="container">
-    <!-- Headline / Hero Section -->
-    <section id="hero" class="highlight-article">
-      <!-- Headline akan dirender via app.js -->
-    </section>
-
-    <!-- Artikel Section -->
-    <section class="section-title">
-      <h2>Rekomendasi Untuk Anda</h2>
-    </section>
-    <div id="articles" class="articles-container">
-      <!-- Artikel akan dirender via app.js -->
+  <section class="filters container">
+    <div id="meta-info">Showing 1 - 10 of 100</div>
+    <div class="selects">
+      <select id="page-size">
+        <option value="10">Show per page: 10</option>
+        <option value="20">Show per page: 20</option>
+        <option value="50">Show per page: 50</option>
+      </select>
+      <select id="sort">
+        <option value="-published_at">Sort by: Newest</option>
+        <option value="published_at">Sort by: Oldest</option>
+      </select>
     </div>
-  </main>
+  </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Berita Kini by Gavin Taufan Dewangga. All rights reserved.</p>
-    </div>
-  </footer>
+  <section class="card-container container" id="card-container">
+    <!-- Cards loaded by JS -->
+  </section>
 
-  <!-- JavaScript -->
-  <script src="app.js"></script>
+  <section class="pagination container" id="pagination">
+    <!-- Pagination buttons -->
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
